@@ -1,0 +1,29 @@
+{
+  "name": "taskify",
+  "version": "0.1.0",
+  "description": "A simple task manager in your cli.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc --watch"
+  },
+  "bin": {
+    "taskify": "./dist/index.js"
+  },
+  "keywords": [
+    "todo",
+    "cli",
+    "task manager"
+  ],
+  "author": "Harsh Agrawal",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
