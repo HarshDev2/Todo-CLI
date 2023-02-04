@@ -41,3 +41,29 @@ if(command === 'list'){
         console.log(`Todos: \n ${todosString}`);
     }
 }
+if(command === 'complete'){
+    if(!existsSync('todos.json')){
+        console.log('Cannot find any todos!')
+    }
+    else {
+        const file = await readFile('todos.json', 'utf-8');
+        const data = await JSON.parse(file);
+
+        let options = data.map((todo: any) => todo.title);
+
+        const response = await inquirer.prompt([
+            {
+                name: 'chooses',
+                message: 'Choose the todos!',
+                type: 'checkbox',
+                choices: options
+            }
+        ]);
+
+        const selectedTodos = response.chooses;
+        let newData = data.filter((todo: any) => !selectedTodos.includes(todo.title));
+
+        await writeFile('todos.json', JSON.stringify(newData));
+        console.log('Todos are sucessfully updated!');
+    }
+}
