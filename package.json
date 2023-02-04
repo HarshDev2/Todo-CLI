@@ -4,6 +4,13 @@
   "description": "A simple task manager in your cli.",
   "main": "dist/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HarshDev2/Todo-CLI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HarshDev2/Todo-CLI/issues"
+  },
   "scripts": {
     "build": "tsc",
     "build:dev": "tsc --watch"
