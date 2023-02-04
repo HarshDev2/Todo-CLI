@@ -29,3 +29,15 @@ if(command === 'add'){
     }
     console.log(`A todo named "${questions.title}" has been sucessfully created!`);
 }
+if(command === 'list'){
+    if(!existsSync('todos.json')){
+        console.log('Cannot find todos file!')
+    }
+    else {
+        const file = await readFile('todos.json', 'utf-8');
+        const data = await JSON.parse(file);
+        
+        let todosString = data.map((todo: any, index: number) => `${index + 1}) ${todo.title}`).join('\n');
+        console.log(`Todos: \n ${todosString}`);
+    }
+}
