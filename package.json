@@ -1,5 +1,5 @@
 {
-  "name": "todo-cli",
+  "name": "taskster",
   "version": "0.1.0",
   "description": "A simple task manager in your cli.",
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
     "build:dev": "tsc --watch"
   },
   "bin": {
-    "tasky": "./dist/index.js"
+    "taskster": "./dist/index.js"
   },
   "keywords": [
     "todo",
