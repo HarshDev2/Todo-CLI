@@ -1,5 +1,5 @@
 {
-  "name": "taskify",
+  "name": "todo-cli",
   "version": "0.1.0",
   "description": "A simple task manager in your cli.",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "build:dev": "tsc --watch"
   },
   "bin": {
-    "todo": "./dist/index.js"
+    "tasky": "./dist/index.js"
   },
   "keywords": [
     "todo",
