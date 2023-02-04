@@ -9,7 +9,7 @@
     "build:dev": "tsc --watch"
   },
   "bin": {
-    "taskify": "./dist/index.js"
+    "todo": "./dist/index.js"
   },
   "keywords": [
     "todo",
