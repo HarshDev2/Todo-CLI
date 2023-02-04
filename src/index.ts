@@ -20,9 +20,6 @@ if(command === 'add'){
         const file = await readFile('todos.json', 'utf-8');
         const data = await JSON.parse(file);
 
-        console.log(file);
-        console.log(data);
-
         await data.push({title: questions.title});
 
         await writeFile('todos.json', JSON.stringify(data));
